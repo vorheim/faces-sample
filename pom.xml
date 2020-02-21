@@ -16,6 +16,7 @@
         <servlet.version>4.0.1</servlet.version>
         <jsf.version>2.2.20</jsf.version>
         <primefaces.version>7.0</primefaces.version>
+        <slf4jVersion>1.7.22</slf4jVersion>
         <jakartaee>8.0</jakartaee>
     </properties>
     
@@ -44,10 +45,21 @@
             <version>${primefaces.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
             <version>${jakartaee}</version>
             <scope>provided</scope>
+        </dependency>
+        <!--Logging to sysout-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4jVersion}</version>
         </dependency>
     </dependencies>
     

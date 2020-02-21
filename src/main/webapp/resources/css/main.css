@@ -21,10 +21,11 @@ h1 {
 form {
 }
 
-input {
-    margin-right: 20px;
+div {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-button {
-    margin-left: 20px;
+button, input {
+    margin-right: 5px !important;
 }

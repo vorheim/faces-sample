@@ -10,8 +10,18 @@
     <h:body>
         <h1>#{bundle['index.title']}</h1>
         <h:form>
-            <p:inputText id="name" value="#{userController.selected.name}"/>
-            <p:commandButton value="Save" action="#{userController.save()}" process="@form" update="@form"/>
+            <div>
+                <p:commandButton value="#{bundle['common.new']}" action="#{userController.goTo('c', null)}" />
+                <p:commandButton value="#{bundle['common.edit']}" action="#{userController.goTo('u', 1)}" />
+                <p:commandButton value="#{bundle['common.view']}" action="#{userController.goTo('r', 2)}" />
+                <p:commandButton value="#{bundle['common.delete']}" action="#{userController.goTo('d', 3)}" />
+            </div>
+            <div>
+                <p:inputText id="name" value="#{userController.selected.name}"/>
+            </div>
+            <div>
+                <p:commandButton value="Save" action="#{userController.save()}" process="@form" update="@form"/>
+            </div>
         </h:form>
     </h:body>
 </html>
